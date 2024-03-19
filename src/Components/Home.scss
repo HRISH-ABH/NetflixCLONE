@@ -1,0 +1,53 @@
+$bg: black;
+.banner {
+  background-color: $bg;
+  height: 22rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card {
+  width: 20rem;
+  height: 20rem;
+  cursor: pointer;
+  margin: 0.2rem;
+
+  padding: 1rem;
+  transition: transform 0.5s ease-in-out;
+  &:hover {
+    transform: translateY(-0.9rem);
+  }
+  img {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.row {
+  background-color: $bg;
+  padding: 1rem;
+  .card-container {
+    display: flex;
+    // justify-content:space-evenly ;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    /* Hide the scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer/Edge */
+    &::-webkit-scrollbar {
+      display: none; /* Webkit-based browsers */
+    }
+  }
+  > h2 {
+    margin: 0.2rem;
+    font-weight: 500;
+  }
+}
+
+.main-img {
+  object-fit: contain;
+  // background-position: center;
+  height: 100%;
+  width: 100%;
+}
